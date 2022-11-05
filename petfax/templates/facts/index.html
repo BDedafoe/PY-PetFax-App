@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>User Facts</title>
+</head>
+<body>
+    <div class="container">
+        <h1>User Facts</h1>
+    <div class="callout">
+        These are facts submitted by our users
+    </div>
+    {% for fact in facts %}
+        <h3>Submitted by {{ fact.submitter }}</h3>
+        {{ fact.fact }}
+    {% endfor %}
+    <p></p>
+    <div class="callout">
+        <a href="/facts/new">⟨　Go back</a>
+    </div>
+    </div>
+</body>
+</html>
+

@@ -45,6 +45,12 @@ h2 {
     font-size: 50px;
     text-shadow: 2px 2px whitesmoke;
 }
+
+h3 {
+    color: var(--second-accent);
+    text-shadow: 2px 2px whitesmoke;
+}
+
 a {
     font-family: var(--accent-font);
     text-decoration: none;
