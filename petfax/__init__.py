@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import ( Flask, redirect )
 from flask_migrate import Migrate
 
 def create_app(): 
@@ -13,7 +13,7 @@ def create_app():
 
     @app.route('/')
     def hello(): 
-        return 'Hello, PetFax! My name is Brittany'
+        return redirect('/pets')
 
 #register pet blueprint
     from . import pet
